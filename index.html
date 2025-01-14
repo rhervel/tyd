@@ -3,167 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Técnicas de Fabricación con Plásticos</title>
+    <title>La Cuarta Revolución Industrial</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        // Carga de Google Charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Sector', 'Impacto (%)'],
+                ['Salud', 30],
+                ['Educación', 25],
+                ['Manufactura', 20],
+                ['Transporte', 15],
+                ['Otros', 10]
+            ]);
+
+            var options = {
+                title: 'Impacto de la Cuarta Revolución Industrial por Sector',
+                is3D: true,
+                colors: ['#1b9e77', '#d95f02', '#7570b3', '#e7298a', '#66a61e']
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #0056b3;
             color: white;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
         }
-        h1 {
+        header h1 {
             margin: 0;
-            font-size: 36px;
+        }
+        nav {
+            background-color: #003d80;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            font-size: 28px;
-            color: #4CAF50;
-        }
-        h3 {
-            font-size: 24px;
-            color: #555;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-top: 10px;
             margin-bottom: 20px;
-            list-style-type: none;
-            padding: 0;
         }
-        ul li {
-            padding-left: 20px;
-            position: relative;
+        section h2 {
+            color: #0056b3;
         }
-        ul li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #4CAF50;
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
         }
         footer {
-            text-align: center;
-            background-color: #4CAF50;
+            background-color: #003d80;
             color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .chart-container {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Técnicas de Fabricación con Plásticos</h1>
-</header>
-
-<section>
-    <h2>Producción de piezas plásticas</h2>
-    <p>El proceso de fabricación de piezas plásticas inicia con el calentamiento del material, que puede encontrarse en forma triturada, en polvo o como bolitas. Las principales técnicas para procesar estos plásticos incluyen:</p>
-    <ul>
-        <li>Extrusión</li>
-        <li>Calandrado</li>
-        <li>Conformación al vacío</li>
-        <li>Conformación por moldeo</li>
-    </ul>
-</section>
-
-<section>
-    <h2>3.1 Extrusión</h2>
-    <h3>Proceso</h3>
-    <p>Consiste en el paso del plástico fundido a través de una boquilla con la forma deseada.</p>
-    <h3>Máquina extrusora</h3>
-    <p>La máquina cuenta con un dosificador que introduce el material en un cilindro para calentarlo. Un tornillo sin fin obliga el avance del polímero fundido, el cual se enfría mediante aire o líquido refrigerante.</p>
-    <h3>Usos</h3>
-    <ul>
-        <li>Fabricación de láminas</li>
-        <li>Fabricación de tubos</li>
-        <li>Fabricación de perfiles</li>
-    </ul>
-</section>
-
-<section>
-    <h2>3.2 Inyección</h2>
-    <h3>Proceso</h3>
-    <p>Similar a la extrusión, pero en este caso, la boquilla está conectada a un molde. El plástico fundido se introduce a presión en el molde, donde se enfría y adopta la forma deseada.</p>
-    <h3>Usos principales</h3>
-    <ul>
-        <li>Termoplásticos en juguetes</li>
-        <li>Piezas automotrices</li>
-        <li>Envases</li>
-        <li>Industria aeroespacial</li>
-    </ul>
-</section>
-
-<section>
-    <h2>3.3 Calandrado</h2>
-    <h3>Proceso</h3>
-    <p>Este proceso involucra una máquina con rodillos que presionan y adelgazan el material gradualmente. El material debe encontrarse en estado de gel viscoso, y los propios rodillos lo calientan.</p>
-    <h3>Usos</h3>
-    <ul>
-        <li>Fabricación de planchas</li>
-        <li>Fabricación de láminas</li>
-    </ul>
-</section>
-
-<section>
-    <h2>3.4 Soplado</h2>
-    <h3>Proceso</h3>
-    <p>Se crea un cilindro de plástico (preforma) mediante inyección o extrusión. Luego, se sopla aire a presión dentro de un molde cerrado, adaptando el plástico al molde. Después, se enfría y se abre el molde.</p>
-    <h3>Usos</h3>
-    <ul>
-        <li>Botellas de plástico</li>
-        <li>Envases de plástico</li>
-    </ul>
-</section>
-
-<section>
-    <h2>3.5 Mecanizado con arranque de viruta</h2>
-    <h3>Fresado</h3>
-    <p>Proceso que utiliza una máquina herramienta (fresadora) con herramientas de corte cilíndricas (fresas), con el fin de crear agujeros, ranuras y canales en el material.</p>
-    <h3>Torneado</h3>
-    <p>Consiste en hacer girar una pieza a gran velocidad en un torno y aplicar una cuchilla para darle forma y obtener piezas con sección circular.</p>
-</section>
-
-<section>
-    <h2>3.6 Compresión</h2>
-    <h3>Proceso</h3>
-    <p>Este proceso es exclusivo para plásticos termoestables. El material se vierte en un molde compuesto por dos partes, que luego se cierra y se somete a calor y presión. Posteriormente, se enfría y se extrae la pieza formada.</p>
-</section>
-
-<section>
-    <h2>3.7 Conformación al vacío</h2>
-    <h3>Proceso</h3>
-    <p>Una lámina de termoplástico se coloca en un molde con calentadores. Una bomba de vacío obliga a la lámina a adoptar la forma del molde.</p>
-</section>
-
-<section>
-    <h2>3.8 Moldeo rotacional o rotomoldeo</h2>
-    <h3>Proceso</h3>
-    <p>El polímero en polvo o líquido se introduce en un molde estanco, que luego se coloca en un horno. El molde gira sobre dos ejes perpendiculares, controlando parámetros como la temperatura, la velocidad de giro y el tiempo de calentamiento. Después, se enfría y se desmoldea.</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Técnicas de Fabricación con Plásticos - Todos los derechos reservados</p>
-</footer>
-
+    <header>
+        <h1>La Cuarta Revolución Industrial</h1>
+        <p>Entendiendo el futuro de la tecnología y la humanidad</p>
+    </header>
+    <nav>
+        <a href="#intro">Introducción</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#conclusion">Conclusión</a>
+    </nav>
+    <div class="container">
+        <section id="intro">
+            <h2>Introducción</h2>
+            <img src="https://via.placeholder.com/800x400?text=Cuarta+Revoluci%C3%B3n+Industrial" alt="Imagen de la Cuarta Revolución Industrial">
+            <p>
+                La Cuarta Revolución Industrial, también conocida como Industria 4.0, 
+                representa un cambio transformador impulsado por tecnologías avanzadas como la inteligencia artificial (IA), 
+                el Internet de las cosas (IoT), la robótica, el big data y la impresión 3D. 
+                Este movimiento está redefiniendo la forma en que vivimos, trabajamos y nos relacionamos.
+            </p>
+            <p>
+                Para más información, puedes visitar el sitio oficial del 
+                <a href="https://www.weforum.org/focus/fourth-industrial-revolution" target="_blank">Foro Económico Mundial</a>.
+            </p>
+        </section>
+        <section id="caracteristicas">
+            <h2>Características Principales</h2>
+            <ul>
+                <li><strong>Conectividad:</strong> Dispositivos inteligentes interconectados a través del IoT.</li>
+                <li><strong>Automatización:</strong> Uso intensivo de robots y algoritmos en diversas industrias.</li>
+                <li><strong>Datos masivos:</strong> Generación y análisis de grandes cantidades de información en tiempo real.</li>
+                <li><strong>Integración:</strong> Convergencia de tecnologías físicas, digitales y biológicas.</li>
+            </ul>
+            <img src="https://via.placeholder.com/800x300?text=Conectividad+y+Tecnolog%C3%ADa" alt="Tecnología de la Cuarta Revolución">
+        </section>
+        <section id="impacto">
+            <h2>Impacto en la Sociedad</h2>
+            <p>
+                La Cuarta Revolución Industrial está transformando sectores como la salud, la educación, la manufactura y el transporte. 
+                Por ejemplo:
+            </p>
+            <ul>
+                <li><strong>Salud:</strong> Diagnósticos más precisos mediante IA y dispositivos wearables.</li>
+                <li><strong>Educación:</strong> Plataformas digitales y aprendizaje personalizado.</li>
+                <li><strong>Economía:</strong> Nuevas oportunidades laborales en tecnología, pero también desafíos en la automatización.</li>
+            </ul>
+            <div class="chart-container">
+                <div id="chart_div" style="width: 100%; height: 400px;"></div>
+            </div>
+        </section>
+        <section id="conclusion">
+            <h2>Conclusión</h2>
+            <p>
+                La Cuarta Revolución Industrial ofrece inmensas oportunidades, pero también plantea retos éticos, sociales y económicos. 
+                Comprender y adaptarse a estos cambios es clave para garantizar un futuro inclusivo y sostenible.
+            </p>
+            <p>Lee más sobre las implicaciones éticas en la <a href="https://en.wikipedia.org/wiki/Fourth_Industrial_Revolution" target="_blank">Wikipedia</a>.</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 Revolución Industrial 4.0 | Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
